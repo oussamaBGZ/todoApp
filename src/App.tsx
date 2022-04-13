@@ -12,6 +12,8 @@ function App() {
   const [searchTodo, setSearchTodo] = useState<string>("")
 
   const handelSubmit = (): void => {
+    if(!todo) return alert('add a todo')
+    
     const todoData = {
       id: uuidv4(),
       todo,
