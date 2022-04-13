@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #34495E;
+  opacity: 0.7;
+  font-size: 6rem;
+  text-align: center;
+}
+
+#form {
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
+  max-width: 100%;
+  width: 400px;
+  display: flex;
+}
+
+.btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  color: #444;
+  font-size: 1rem;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #d5d5d5;
+}
+
+.input:focus {
+  outline-color: #34495E;
+  opacity: 0.6;
+}
+
+.todos {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.todos li {
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.item-enter {
+  opacity: 0;
+  transform: translateX(40%);
+
+}
+.item-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms ease-in;
+}
+
+.item-exit {
+  opacity: 1;
+}
+
+.item-exit-active {
+  opacity: 0;
+  transform: translateX(50%);
+
+  transition: all 300ms ease-in;
 }
